@@ -1,0 +1,192 @@
+/* -------------------------
+   Reset and base styles
+------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f4f7;
+    direction: rtl; /* للغة العربية */
+    color: #333;
+}
+
+/* -------------------------
+   Header / Titles
+------------------------- */
+h1, h2, h3 {
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* -------------------------
+   Container
+------------------------- */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* -------------------------
+   Forms
+------------------------- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"],
+input[type="password"],
+select,
+textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+button {
+    padding: 12px;
+    background-color: #2b7a78;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #3aafa9;
+}
+
+/* -------------------------
+   Cards for notifications
+------------------------- */
+.notification-card {
+    background-color: #def2f1;
+    border-left: 5px solid #3aafa9;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.notification-card img {
+    max-width: 240px;
+    display: block;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+
+.notification-header {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #17252a;
+}
+
+/* -------------------------
+   Admin select page
+------------------------- */
+.role-select {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.role-select button {
+    width: 150px;
+    font-weight: bold;
+}
+
+/* -------------------------
+   Table (optional if used)
+------------------------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #17252a;
+    color: #fff;
+}
+
+/* -------------------------
+   Responsive
+------------------------- */
+@media (max-width: 600px) {
+    .container {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    .role-select {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* =====================
+   Responsive for Mobile & Tablet
+===================== */
+@media screen and (max-width: 768px) {
+
+    /* الجسم الرئيسي */
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    /* بطاقات التبليغات */
+    .notification-card {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    /* الفورمات */
+    form input,
+    form select,
+    form textarea,
+    form button {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+
+    /* الصور داخل التبليغات */
+    .notification-card img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* روابط التعديل والحذف */
+    .notification-card form {
+        display: block;
+        margin-top: 5px;
+    }
+
+}
